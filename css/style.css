@@ -1,7 +1,12 @@
+@import "tailwindcss";
+
 /********************* Topbar *********************/
 
 :root {
     --primary-color: #0E8660;
+    --text-color: #334155;
+    --p-text-muted-color: #64748b
+
 }
 
 @font-face {
@@ -12,148 +17,52 @@
     src: url('../fonts/Lato-Medium.woff2') format('woff2');
 }
 
-html {
-    height: 100%;
-    font-size: 14px;
-    line-height: 1.2;
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('../fonts/Lato-Light.woff2') format('woff2');
 }
 
-.text-logo {
-    line-height: 1.5;
-    font-weight: 500;
-    font-size: 1.5rem;
-    margin-right: 5rem;
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../fonts/Lato-Bold.woff2') format('woff2');
 }
 
-body {
-    margin: 0;
-    font-family: Lato, sans-serif;
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/Lato-Regular.woff2') format('woff2');
 }
 
-.topbar {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
-}
+@layer base {
+    p {
+        margin-bottom: 1rem;
+        line-height: 1.5;
+    }
+    html {
+        height: 100%;
+        font-size: 14px;
+        line-height: 1.2;
+    }
 
-@media (min-width: 992px) {
-    .topbar {
-        margin-left: 5rem;
-        margin-right: 5rem;
+    body {
+        margin: 0;
+        font-family: Lato, sans-serif;
     }
 }
 
-.topbar-menu {
-    border-radius: 6px;
-    justify-content: space-between;
-    align-items: center;
-    flex-grow: 1;
-    width: 100%;
-    display: flex;
+.text-muted-color {
+    color: var(--p-text-muted-color);
 }
 
-@media (min-width: 992px) {
-    .topbar-menu {
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
-
-@media (min-width: 992px) {
-    .topbar-menu {
-        position: static;
-    }
-}
-
-.menu-items {
-    flex-direction: row;
-    padding: 0;
-    gap: 2rem;
-    list-style-type: none;
-    cursor: pointer;
-    display: flex;
-    margin: 0;
-}
-
-.topbar-auth {
-    display: flex;
-    gap: .5rem;
-}
-
-@media (min-width: 992px) {
-    .topbar-auth {
-        padding-top: 0;
-        padding-bottom: 0;
-    }
-}
-
-.topbar-menu .menu-items li a {
-    font-weight: 500;
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 0;
-    padding-right: 0;
-}
-
-@media (min-width: 992px) {
-    .menu-items {
-        align-items: center;
-    }
-}
-
-.items-center {
-    align-items: center;
-}
-
-.flex {
-    display: flex;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.h-12 {
-    height: 3rem;
-}
-
-.mr-2 {
-    margin-right: .5rem;
-}
-
-img, svg, video, canvas, audio, iframe, embed, object {
-    display: block;
-}
-
-@media (min-width: 992px) {
-    .topbar {
-        padding-left: 5rem;
-        padding-right: 5rem;
-    }
-}
-
-.main-content {
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), radial-gradient(77.36% 256.97% at 77.36% 57.52%, rgb(238, 239, 175) 0%, rgb(195, 227, 250) 100%);
-    clip-path: ellipse(150% 87% at 93% 13%);
-    padding-top: 1.5rem;
-    overflow: hidden;
-    flex-direction: column;
-    display: flex;
-}
-
-@media (min-width: 992px) {
-    .main-content {
-        padding-left: 5rem;
-        padding-right: 5rem;
-    }
-}
-
-.btn {
+.p-button {
     display: inline-flex;
     cursor: pointer;
     user-select: none;
@@ -173,32 +82,25 @@ img, svg, video, canvas, audio, iframe, embed, object {
     transition: background 0.2s, color 0.2s, border-color 0.2s, outline-color 0.2s, box-shadow 0.2s;
 }
 
-.btn:not(:disabled):hover {
+.p-button:not(:disabled):hover {
     background-color: #0C7451;
 }
 
-.btn .btn-label {
+.p-button .p-button-label {
     font-weight: 500
 }
 
-.btn-rounded {
+.p-button-rounded {
     border-radius: 2rem;
 }
 
-.btn-text {
+.p-button-text {
     background: transparent;
     border-color: transparent;
     color: var(--primary-color);
 }
 
-.btn-text:not(:disabled):hover {
+.p-button-text:not(:disabled):hover {
     background: #ecfdf5;
     border-color: transparent;
 }
-
-button {
-    font-weight: inherit;
-    line-height: inherit;
-    letter-spacing: inherit;
-}
-
