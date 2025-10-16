@@ -107,10 +107,10 @@
                         <ul class="list-none p-0 m-0 flex lg:items-center select-none flex-col lg:flex-row cursor-pointer gap-8">
                             <li><a class="px-0 py-4 text-surface-900 dark:text-surface-0 font-medium text-xl"><span>Home</span></a>
                             </li>
-                            <li><a class="px-0 py-4 text-surface-900 dark:text-surface-0 font-medium text-xl"><span>Features</span></a></li>
-                            <li><a class="px-0 py-4 text-surface-900 dark:text-surface-0 font-medium text-xl"><span>Highlights</span></a>
+                            <li><a class="px-0 py-4 text-surface-900 dark:text-surface-0 font-medium text-xl" href="#features"><span>Features</span></a></li>
+                            <li><a class="px-0 py-4 text-surface-900 dark:text-surface-0 font-medium text-xl" href="#highlights"><span>Highlights</span></a>
                             </li>
-                            <li><a class="px-0 py-4 text-surface-900 dark:text-surface-0 font-medium text-xl"><span>Pricing</span></a></li>
+                            <li><a class="px-0 py-4 text-surface-900 dark:text-surface-0 font-medium text-xl" href="#pricing"><span>Pricing</span></a></li>
                         </ul>
                         <div class="flex border-t lg:border-t-0 border-surface py-4 lg:py-0 mt-4 lg:mt-0 gap-2">
                             <a href="/auth/login" class="p-button p-component p-button-rounded p-button-text" aria-label="Login" data-pc-name="button" data-p-disabled="false" pc1="" data-pc-section="root"><!----><span class="p-button-label" data-pc-section="label">Login</span><!----></a><button class="p-button p-component p-button-rounded" type="button" aria-label="Register" data-pc-name="button" data-p-disabled="false" to="/auth/login" pc2="" data-pc-section="root"><!----><span class="p-button-label" data-pc-section="label">Register</span><!----></button>

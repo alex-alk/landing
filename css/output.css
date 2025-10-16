@@ -874,10 +874,39 @@
     height: 100%;
     font-size: 14px;
     line-height: 1.2;
+    scroll-behavior: smooth;
   }
   body {
     margin: 0;
     font-family: Lato, sans-serif;
+  }
+  .border-surface-200 {
+    --tw-border-opacity: 1;
+    border-color: color-mix(in srgb, #e2e8f0 calc(100%), transparent);
+  }
+  .hover\:border-primary:hover {
+    --tw-border-opacity: 1;
+    border-color: var(--primary-color);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in srgb, var(--primary-color) calc(100%), transparent);
+    }
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #334155;
+    margin: 1.5rem 0px 1rem;
+  }
+  h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+    margin-top: 0px;
+  }
+  .bg-surface-0 {
+    --tw-bg-opacity: 1;
+    background-color: white;
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in srgb, white calc(100% * var(--tw-bg-opacity)), transparent);
+    }
   }
 }
 .text-muted-color {
